@@ -27,12 +27,10 @@ _To be decided_
 
 ```
 npm install
-
 ```
 
 3. Add a `.env` file containing all the private information and change it with your own configs
 4. Run the app
 ```
 npm start
-
 ```
