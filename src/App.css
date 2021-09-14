@@ -1711,11 +1711,11 @@ div.rta__autocomplete.str-chat__emojisearch {
   display: none;
 }
 
-.channerl-list__container-toggle {
+.channel-list__container-toggle {
   display: none;
   height: 50px;
   width: 50px;
-  background: #005fff;
+  background: #272336;
   position: absolute;
   right: -2%;
   top: 50%;
