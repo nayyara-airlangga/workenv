@@ -71,60 +71,62 @@ const ChannelListContent = ({
       <div className="channel-list__list__wrapper">
         <AppHeader />
         <ChannelSearch setToggleContainer={setToggleContainer} />
-        <ChannelList
-          filters={filters}
-          channelRenderFilterFn={customChannelTeamFilter}
-          List={(listProps) => (
-            <GroupChannelList
-              {...listProps}
-              children={listProps.children}
-              isError={false}
-              isLoading={false}
-              setIsCreating={setIsCreating}
-              isCreating={isCreating}
-              setIsEditing={setIsEditing}
-              setCreateType={setCreateType}
-              setToggleContainer={setToggleContainer}
-              type="team"
-            />
-          )}
-          Preview={(previewProps) => (
-            <GroupChannelPreview
-              {...previewProps}
-              type="team"
-              setIsCreating={setIsCreating}
-              setIsEditing={setIsEditing}
-              setToggleContainer={setToggleContainer}
-            />
-          )}
-        />
-        <ChannelList
-          filters={filters}
-          channelRenderFilterFn={customChannelMessagingFilter}
-          List={(listProps) => (
-            <GroupChannelList
-              {...listProps}
-              children={listProps.children}
-              isError={false}
-              isLoading={false}
-              setIsCreating={setIsCreating}
-              isCreating={isCreating}
-              setIsEditing={setIsEditing}
-              setCreateType={setCreateType}
-              setToggleContainer={setToggleContainer}
-              type="messaging"
-            />
-          )}
-          Preview={(previewProps) => (
-            <GroupChannelPreview
-              {...previewProps}
-              type="messaging"
-              setIsCreating={setIsCreating}
-              setIsEditing={setIsEditing}
-              setToggleContainer={setToggleContainer}
-            />
-          )}
-        />
+        <div className="channel-list__list__scroll">
+          <ChannelList
+            filters={filters}
+            channelRenderFilterFn={customChannelTeamFilter}
+            List={(listProps) => (
+              <GroupChannelList
+                {...listProps}
+                children={listProps.children}
+                isError={false}
+                isLoading={false}
+                setIsCreating={setIsCreating}
+                isCreating={isCreating}
+                setIsEditing={setIsEditing}
+                setCreateType={setCreateType}
+                setToggleContainer={setToggleContainer}
+                type="team"
+              />
+            )}
+            Preview={(previewProps) => (
+              <GroupChannelPreview
+                {...previewProps}
+                type="team"
+                setIsCreating={setIsCreating}
+                setIsEditing={setIsEditing}
+                setToggleContainer={setToggleContainer}
+              />
+            )}
+          />
+          <ChannelList
+            filters={filters}
+            channelRenderFilterFn={customChannelMessagingFilter}
+            List={(listProps) => (
+              <GroupChannelList
+                {...listProps}
+                children={listProps.children}
+                isError={false}
+                isLoading={false}
+                setIsCreating={setIsCreating}
+                isCreating={isCreating}
+                setIsEditing={setIsEditing}
+                setCreateType={setCreateType}
+                setToggleContainer={setToggleContainer}
+                type="messaging"
+              />
+            )}
+            Preview={(previewProps) => (
+              <GroupChannelPreview
+                {...previewProps}
+                type="messaging"
+                setIsCreating={setIsCreating}
+                setIsEditing={setIsEditing}
+                setToggleContainer={setToggleContainer}
+              />
+            )}
+          />
+        </div>
       </div>
     </>
   );

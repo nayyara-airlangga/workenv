@@ -403,6 +403,11 @@ body {
   width: 240px;
 }
 
+.channel-list__list__scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .icon1__inner {
   font-family: Helvetica Neue, sans-serif;
   height: 100%;
